@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title></title>
+	<meta charset="utf-8">
+
+
+	<style type="text/css">
+		/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
+		@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+		* {
+
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+			font-family: Poppins;
+		}
+
+		body {
+			top: 0;
+			margin: 0;
+			padding: 0;
+			text-align: center;
+			-webkit-box-pack: center;
+			-ms-flex-pack: center;
+			justify-content: center;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+			margin-top: 0px;
+			background: #ebf5fb;
+		}
+
+
+
+		.head {
+			padding-top: 20px;
+			width: 100%;
+			background-color: #21618c;
+			height: 100px;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+		}
+
+		.head label {
+
+			font-size: 40px;
+			color: white;
+		}
+
+		#caixa {
+			margin-top: 150px;
+			margin-left: 100px;
+			padding-top: 0px;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			width: 500px;
+			height: 500px;
+			background: #fff;
+		}
+
+		fieldset {
+			width: 400px;
+		}
+
+		.border {
+			position: relative;
+			display: block;
+		}
+
+		.rangers input {
+			width: 400px;
+			height: 25px;
+			margin-bottom: 10px;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-orient: vertical;
+			-webkit-box-direction: normal;
+			-ms-flex-direction: column;
+			flex-direction: column;
+		}
+
+		.rangers {
+
+			width: 50vw;
+			margin-left: 750px;
+			margin-top: -500px;
+
+		}
+
+
+		#css {
+			position: relative;
+			display: block;
+			float: right;
+			margin-top: -350px;
+			padding-top: 15px;
+			height: 200px;
+			text-align: left;
+			width: 400px;
+			height: 300px;
+			margin-left: -10px;
+		}
+
+		.color {
+			position: relative;
+			display: block;
+			float: right;
+			width: 400px;
+			margin-top: -568px;
+
+		}
+
+		.color span {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			position: absolute;
+
+		}
+
+		.color input {
+			position: relative;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			margin-top: 0px;
+			margin-left: 50px;
+			width: 300px;
+		}
+	</style>
+	<script type="text/javascript">
+
+
+
+
+
+
+		function borderRadius() {
+			var top_left = Math.floor(document.querySelector("#top-left").value);
+			var top_right = Math.floor(document.querySelector("#top-right").value);
+			var bottom_right = Math.floor(document.querySelector("#bottom-right").value);
+			var bottom_left = Math.floor(document.querySelector("#bottom-left").value);
+
+
+
+
+
+			document.querySelector("#caixa").style.borderTopLeftRadius = top_left + 'px';
+			document.querySelector("#caixa").style.borderTopRightRadius = top_right + 'px';
+			document.querySelector("#caixa").style.borderBottomRightRadius = bottom_right + 'px';
+			document.querySelector("#caixa").style.borderBottomLeftRadius = bottom_left + 'px';
+
+
+
+			var topLeft = document.querySelector('#topLeft').innerHTML = "border-top-left-radius : " + top_left + "px;";
+			var topRight = document.querySelector('#topRight').innerHTML = "border-top-right-radius : " + top_right + "px;";
+			var bottomRight = document.querySelector('#bottomRight').innerHTML = "border-bottom-right-radius : " + bottom_right + "px;";
+			var bottomLeft = document.querySelector('#bottomLeft').innerHTML = "border-bottom-left-radius : " + bottom_left + "px;";
+
+			document.querySelector("#caixa").style.borderRadius = topLeft + topRight + bottomRight + bottomLeft;
+
+
+		}
+		borderRadius();
+
+
+
+		function shadow() {
+			var offset_x = Math.floor(document.querySelector("#offset-x").value);
+			var offset_y = Math.floor(document.querySelector("#offset-y").value);
+			var blur_radius = Math.floor(document.querySelector("#blur-radius").value);
+			var spread_radius = Math.floor(document.querySelector("#spread-radius").value);
+
+
+
+
+			document.querySelector("#caixa").style.boxShadow = offset_x + "px";
+			document.querySelector("#caixa").style.boxShadow = offset_y + "px";
+			document.querySelector("#caixa").style.boxShadow = blur_radius + "px";
+			document.querySelector("#caixa").style.boxShadow = spread_radius + "px";
+
+
+
+
+
+			var x = document.querySelector('#offsetx').innerHTML = "box-shadow: " + offset_x + "px ";
+			var y = document.querySelector('#offsety').innerHTML = "  " + offset_y + "px";
+			var blur = document.querySelector('#blurradius').innerHTML = "  " + blur_radius + "px";
+			var spread = document.querySelector('#spreadradius').innerHTML = "   " + spread_radius + "px";
+
+
+
+			document.querySelector("#caixa").style = x + y + blur + spread;
+
+		}
+		shadow();
+
+
+
+		function color() {
+
+
+			var r = document.querySelector("#r").value;
+			var g = document.querySelector("#g").value;
+			var b = document.querySelector("#b").value;
+			var a = document.querySelector("#a").value;
+
+			document.querySelector(".caixa").style += r;
+			document.querySelector(".caixa").style = g;
+			document.querySelector(".caixa").style = b;
+			document.querySelector(".caixa").style = a;
+
+			var rgba = document.querySelector('#rgba').innerHTML = " rgba(" + r + ", " + g + ", " + b + ", " + a + ")";
+
+			document.querySelector('#caixa').style.backgroundColor = rgba;
+
+		}
+		color();
+
+
+	</script>
+</head>
+
+<body>
+	<div class="head">
+		<label>BORDER-RADIUS GENERATOR</label>
+	</div>
+	<div id="caixa" class="caixa">
+		<div class="caixa2"></div>
+	</div>
+
+
+	<div class="rangers">
+
+		<fieldset class="shadow">
+			<legend style="text-align: left;">Shadow</legend>
+			<span>offset-x</span>
+			<input onchange="shadow()" id="offset-x" type="range" name="" min="-250" max="250" step="any" value="0">
+			<span>offset-y</span>
+			<input onchange="shadow()" id="offset-y" type="range" name="" min="-250" max="250" step="any" value="0">
+			<span>blur-radius</span>
+			<input onchange="shadow()" id="blur-radius" type="range" name="" min="-250" max="250" step="any" value="0">
+			<span>spread-radius</span>
+			<input onchange="shadow()" id="spread-radius" type="range" name="" min="-250" max="250" step="any"
+				value="0">
+		</fieldset>
+
+		<fieldset class="border">
+			<legend style="text-align: left;">Border-Radius</legend>
+			<span>Border Top Left Radius</span><br>
+			<input id="top-left" type="range" onchange="borderRadius()" name="" min="0" max="500" step="any" value="0">
+			<span>Border Top Right Radius</span><br>
+			<input id="top-right" type="range" onchange="borderRadius()" name="" min="0" max="500" step="any" value="0">
+			<span>Border Bottom Right Radius</span><br>
+			<input id="bottom-right" type="range" onchange="borderRadius()" name="" min="0" max="500" step="any"
+				value="0">
+			<span>Border Bottom Left Radius</span><br>
+			<input id="bottom-left" type="range" onchange="borderRadius()" name="" min="0" max="500" step="any"
+				value="0">
+		</fieldset>
+
+		<fieldset class="color">
+			<legend style="text-align: left;">Color</legend>
+			<span>R</span>
+			<input onchange="color()" id="r" type="range" name="" min="0" max="255" value="0">
+			<span>G</span>
+			<input onchange="color()" id="g" type="range" name="" min="0" max="255" value="0">
+			<span>B</span>
+			<input onchange="color()" id="b" type="range" name="" min="0" max="255" value="0">
+			<span>A</span>
+			<input onchange="color()" id="a" type="range" name="" step="0.1" min="0.0" max="1.0" value="0.0">
+		</fieldset>
+
+		<fieldset id="css">
+			<legend>CSS</legend>
+			<label id="topLeft"> </label><br>
+			<label id="topRight"> </label><br>
+			<label id="bottomRight"> </label><br>
+			<label id="bottomLeft"> </label><br><br>
+			<label id="offsetx"></label>
+			<label id="offsety"></label>
+			<label id="blurradius"></label>
+			<label id="spreadradius"></label>
+			<label id="rgba"></label>
+		</fieldset>
+
+
+	</div>
+
+</body>
+
+</html>
